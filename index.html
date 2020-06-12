@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,32 +7,44 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
     <title>Code Quiz</title>
 </head>
-
 <body>
-    <div class=container>
+    <header>
+        <div id="time"></div>
+    </header>
+    <div class="container">
         <main>
             <div class="jumbotron">
-                <div class="col-sm-6">
+                <div id="codingQuizChallenge">
                     <h1>Coding Quiz Challenge</h1>
-                    <div class="row">
-                        <p>Try to answer the following code-related questions within the time limit. Keep in mind
-                            incorrect answers will penalize your score/time by ten seconds!</p>
-                        <button type="button" class="btn btn-primary" id="startButton">Start</button>
+                    <p>
+                        Try to answer the following code-related questions within the time limit. Keep in mind
+                        incorrect answers will penalize your score/time by ten seconds!
+                    </p>
+                    <button type="button" class="btn btn-primary" id="startQuiz">Start</button>
+                </div>
+                <div id="codingQuiz">
+                    <h2 id="questions"></h2>
+                    <div>
+                        <button type="button" class="btn btn-primary answerButtons" id="answer1"></button>
+                        <br><br>
+                        <button type="button" class="btn btn-primary answerButtons" id="answer2"></button>
+                        <br><br>
+                        <button type="button" class="btn btn-primary answerButtons" id="answer3"></button>
+                        <br><br>
+                        <button type="button" class="btn btn-primary answerButtons" id="answer4"></button>
                     </div>
-                    <div">
-                        <h2 id="quiz"></h2>
-                        <button type="button" class="btn btn-primary" id="choice0"></button>
-                        <button type="button" class="btn btn-primary" id="choice1"></button>
-                        <button type="button" class="btn btn-primary" id="choice2"></button>
-                        <button type="button" class="btn btn-primary" id="choice3"></button>
-                    </div>
+                    <hr>
+                    <h2 id="correctWrong"></h2>
+                </div>
+                <div id="highScore">
+                    <h2>All Done!</h2>
+                    <h3 id="totalScore"></h3>
                 </div>
             </div>
         </main>
     </div>
+    <script src="./script.js"></script>
 </body>
-
 </html>
