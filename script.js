@@ -105,7 +105,7 @@ function startQuestions() {
 // Adds event listener to each answer choice button
 // event.target returns the DOM element, only targets the correct answers and displays
 for (var i = 0; i < answerButtons.length; i++) {
-  answerButtons[i].addEventListener("click", function() {
+  answerButtons[i].addEventListener("click", function () {
     if (event.target.textContent === allQuestion.answer) {
       correctWrong.textContent = "Correct!";
     }
